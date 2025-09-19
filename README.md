@@ -11,13 +11,13 @@
 * 上記の環境で動作確認を行っています
 
 ## 導入手順
-1. Python 3.12.xをダウンロード・インストール
+1. Python 3.12.10をダウンロード・インストール
 
    1. ダウンロード先
       * https://www.python.org/downloads/windows/
 
    2. インストール時にAdd python.exe to PATHにチェックを入れる
-      * 3.13に対応していないカスタムノードがあったので3.12を入れています
+      * 3.13に対応していないカスタムノードがあったので3.12.10を入れています
    
 2. Gitのダウンロード・インストール
 
@@ -25,10 +25,11 @@
       * https://git-scm.com/
 
 3. インストール先のフォルダ作成
-   * C:\ComfyUI_ROCm7 にインストールする場合で説明
-
+   * C:\ComfyUI_ROCm7 にインストールする場合です。
+   * 別のフォルダに入れたい場合は読み替えてください
+  
    1. コマンドプロンプトを実行
-      * ファイル名を指定して実行で以下のコマンドを実行
+      * 「ファイル名を指定して実行」にて、以下のコマンドを実行
       ```
       cmd
       ```
@@ -58,9 +59,10 @@
       ```
 
 6. AMD ROCm7.xとPyTorchを導入
-   * 以下の説明から、自分のグラボに合ったパッケージをインストール
+   * 以下のURLの説明から、自分のグラボに合ったパッケージをインストール
        https://github.com/ROCm/TheRock/blob/main/RELEASES.md
-   * AMD Radeon RX 7900 XTXで説明
+
+   * AMD Radeon RX 7900 XTXで説明します
    1. ROCm Python packagesをインストール
       ```
       python -m pip install --index-url https://rocm.nightlies.amd.com/v2/gfx110X-dgpu/  "rocm[libraries,devel]" 
@@ -124,7 +126,7 @@
       exit
       ```
 
-   7. ComfyUI起動（バッチファイルを作成したほうが良いです）
+   8. ComfyUI起動（バッチファイルを作成したほうが良いです）
       1. コマンドプロンプトを実行
       ```
       cmd
@@ -152,7 +154,7 @@
       ```
       * GPUデバイスを指定
       * 複数のGPU（iGPU含む）は処理するGPUを指定する
-      * 数字は環境によって異なるため 各自指定（0～）してください
+      * 数字は環境によって異なるため 各自指定してください（0～）
       ```
       set CUDA_VISIBLE_DEVICES=1
       ```
@@ -170,8 +172,8 @@
       ```
       python main.py %COMMANDLINE_ARGS% 
       ```
-      * 「To see the GUI go to: http://127.0.0.1:8188」と表示されたら、ブラウザで`http://127.0.0.1:8188`を開いて起動確認
-      * 終了する場合はCTRL+Cで終了する
+      * 「 To see the GUI go to: http://127.0.0.1:8188 」と表示されたら、ブラウザで `http://127.0.0.1:8188` を開いて起動確認
+      * 終了する場合はCTRL+Cで終了
 
 
    8. おまけ
