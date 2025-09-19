@@ -60,6 +60,7 @@
 
 6. AMD ROCm7.xとPyTorchを導入
    * 以下のURLの説明から、自分のグラボに合ったパッケージをインストール
+   * ナイトリービルドです
        https://github.com/ROCm/TheRock/blob/main/RELEASES.md
 
    * AMD Radeon RX 7900 XTXで説明します
@@ -67,7 +68,7 @@
       ```
       python -m pip install --index-url https://rocm.nightlies.amd.com/v2/gfx110X-dgpu/  "rocm[libraries,devel]" 
       ```
-   2. RPyTorch Python packagesをインストール
+   2. PyTorch Python packagesをインストール
       ```
       python -m pip install --index-url https://rocm.nightlies.amd.com/v2/gfx110X-dgpu/ --pre torch torchaudio torchvision
       ```
@@ -186,11 +187,14 @@
       ```
 
       2. 自分の環境用のバッチファイルを置いておきます
-         1. インストール用； ComfyUI_Windows_Install_rocm7.bat
-         2. ComfyUI起動用； ComfyUI_Windows_ROCm7.bat
+         1. インストール用: ComfyUI_Windows_Install_rocm7.bat
+         2. ComfyUI起動用: ComfyUI_Windows_ROCm7.bat
+         3. ROCm7.xとPyTorchをアップデート用: ComfyUI_Windows_Update_ROCm7.bat
 
             * パス等は書き換えてください
+            * rocmとPyTorchのパッケージは自分のGPUのものに置き換えてください（バッチファイルは 7900 XTX用です）
             * ComfyUI起動時にComfyUI本体とすべてのカスタムノードの更新を行います
+
 
 ## Author
 [itom0717](https://github.com/itom0717)
