@@ -60,8 +60,8 @@
 
 6. AMD ROCm7.xとPyTorchを導入
    * 以下のURLの説明から、自分のグラボに合ったパッケージをインストール
+      https://github.com/ROCm/TheRock/blob/main/RELEASES.md
    * ナイトリービルドです
-       https://github.com/ROCm/TheRock/blob/main/RELEASES.md
 
    * AMD Radeon RX 7900 XTXで説明します
    1. ROCm Python packagesをインストール
