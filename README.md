@@ -1,5 +1,5 @@
 # Windows + ROCm 7.x + ComfyUI環境を構築作成
-* ROCm Ver.6.4.2.1用
+* ROCm Ver.7.x用
 
 ## PC環境
 | 項目 | スペック |
