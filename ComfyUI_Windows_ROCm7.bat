@@ -73,12 +73,12 @@ set PYTORCH_TUNABLEOP_ENABLED=1
 rem GPUデバイスを指定
 set CUDA_VISIBLE_DEVICES=1
 
-rem 入出力パス(任意のパスに変更)
-set INPUT_DIRECTORY=%USERPROFILE%\OneDrive\画像\AI生成\ComfyUI\99_Input
+rem 出力パス(任意のパスに変更)
+set OUTPUT_DIRECTORY=%USERPROFILE%\OneDrive\画像\AI生成\ComfyUI\00_Output
 
 rem 起動オプション
 set COMMANDLINE_ARGS=--use-pytorch-cross-attention --normalvram --disable-xformers --fp16-unet --fp16-text-enc --bf16-vae 
 
 rem 起動
-python main.py %COMMANDLINE_ARGS% --input-directory "%INPUT_DIRECTORY%" 
+python main.py %COMMANDLINE_ARGS% --output-directory "%OUTPUT_DIRECTORY%"
 
