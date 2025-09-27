@@ -10,11 +10,14 @@ set ComfyUIPath=%BasePath%\ComfyUI
 mkdir "%BasePath%"
 cd /d "%BasePath%"
 
+rem UTF-8 をデフォルトにする
+set PYTHONUTF8=1
+
 rem 仮想環境を作成
 echo ----------------------------------------------
 echo Python仮想環境を作成
 echo ----------------------------------------------
-py -3.12 -m venv venv
+py -3.13 -m venv venv
 
 echo ----------------------------------------------
 echo Python仮想環境をアクティベート
@@ -76,7 +79,9 @@ git clone https://github.com/alexopus/ComfyUI-Image-Saver.git
 git clone https://github.com/tkoenig89/ComfyUI_Load_Image_With_Metadata.git
 git clone https://github.com/shiimizu/ComfyUI_smZNodes.git
 git clone https://github.com/jags111/efficiency-nodes-comfyui.git
-rem git clone https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes.git
+git clone https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes.git
+git clone https://github.com/chrisgoringe/cg-controller.git
+git clone https://github.com/asagi4/comfyui-prompt-control.git
 
 
 echo ----------------------------------------------

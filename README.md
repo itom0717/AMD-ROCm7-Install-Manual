@@ -11,13 +11,12 @@
 * 上記の環境で動作確認を行っています
 
 ## 導入手順
-1. Python 3.12.10をダウンロード・インストール
+1. Python 3.13.7をダウンロード・インストール
 
    1. ダウンロード先
       * https://www.python.org/downloads/windows/
 
    2. インストール時にAdd python.exe to PATHにチェックを入れる
-      * 3.13に対応していないカスタムノードがあったので3.12.10を入れています
    
 2. Gitのダウンロード・インストール
 
@@ -45,8 +44,12 @@
       ```
 
 4. Python仮想環境を作成＆アクアクティベート
+      * UTF-8 をデフォルトにする
       ```
-      py -3.12 -m venv venv
+      set PYTHONUTF8=1
+      ```
+      ```
+      py -3.13 -m venv venv
       ```
       ```
       call venv\Scripts\activate

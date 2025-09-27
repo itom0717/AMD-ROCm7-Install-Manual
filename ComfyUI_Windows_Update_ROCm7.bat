@@ -3,6 +3,9 @@ set BasePath=C:\ComfyUI_ROCm7
 
 cd /d "%BasePath%"
 
+rem UTF-8 をデフォルトにする
+set PYTHONUTF8=1
+
 rem Python仮想環境をアクティベート
 call venv\Scripts\activate
 
