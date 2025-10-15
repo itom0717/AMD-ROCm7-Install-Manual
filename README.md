@@ -152,9 +152,9 @@
       ```
       set TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL=1
       ```
-      * 最初は遅いが2回目以降は処理を高速化
+      * GPU内蔵System DMAを無効
       ```
-      set PYTORCH_TUNABLEOP_ENABLED=1
+      set HSA_ENABLE_SDMA=0
       ```
       * GPUデバイスを指定
       * 複数のGPU（iGPU含む）は処理するGPUを指定する
@@ -166,7 +166,7 @@
       * ComfyUI起動オプション
       * 任意で指定してください
       ```
-      set COMMANDLINE_ARGS=--use-pytorch-cross-attention --normalvram --disable-xformers --fp16-unet --fp16-text-enc --bf16-vae 
+      set COMMANDLINE_ARGS=--use-pytorch-cross-attention --normalvram
       ```
 
       * ComfyUI起動

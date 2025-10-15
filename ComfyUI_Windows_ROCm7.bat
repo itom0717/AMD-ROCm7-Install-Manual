@@ -70,8 +70,8 @@ cd /d "%ComfyUIPath%"
 rem メモリ効率アテンションを有効
 set TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL=1
 
-rem 最初は遅いが2回目以降は処理を高速化
-set PYTORCH_TUNABLEOP_ENABLED=1
+rem GPU内蔵System DMAを無効
+set HSA_ENABLE_SDMA=0
 
 rem GPUデバイスを指定
 set CUDA_VISIBLE_DEVICES=1
@@ -80,7 +80,7 @@ rem 出力パス(任意のパスに変更)
 set OUTPUT_DIRECTORY=%USERPROFILE%\OneDrive\画像\AI生成\ComfyUI\00_Output
 
 rem 起動オプション
-set COMMANDLINE_ARGS=--use-pytorch-cross-attention --normalvram --disable-xformers --fp16-unet --fp16-text-enc --bf16-vae 
+set COMMANDLINE_ARGS=--use-pytorch-cross-attention --normalvram
 
 rem 起動
 python main.py %COMMANDLINE_ARGS% --output-directory "%OUTPUT_DIRECTORY%"
