@@ -69,11 +69,11 @@
    * AMD Radeon RX 7900 XTXで説明します
    1. ROCm Python packagesをインストール
       ```
-      python -m pip install --index-url https://rocm.nightlies.amd.com/v2/gfx110X-dgpu/  "rocm[libraries,devel]" 
+      python -m pip install --index-url https://rocm.nightlies.amd.com/v2/gfx110X-all/ "rocm[libraries,devel]"
       ```
    2. PyTorch Python packagesをインストール
       ```
-      python -m pip install --index-url https://rocm.nightlies.amd.com/v2/gfx110X-dgpu/ --pre torch torchaudio torchvision
+      python -m pip install --index-url https://rocm.nightlies.amd.com/v2/gfx110X-all/ --pre torch torchaudio torchvision
       ```
 
 7. ComfyUIをインストール
