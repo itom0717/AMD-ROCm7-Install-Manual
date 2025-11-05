@@ -32,12 +32,12 @@ python -m pip install --upgrade pip
 echo ----------------------------------------------
 echo ROCm Python packagesをインストール
 echo ----------------------------------------------
-python -m pip install --index-url https://rocm.nightlies.amd.com/v2/gfx110X-all/ "rocm[libraries,devel]"
+python -m pip install --index-url https://rocm.nightlies.amd.com/v2/gfx110X-dgpu/  "rocm[libraries,devel]"
 
 echo ----------------------------------------------
 echo PyTorch Python packagesをインストール
 echo ----------------------------------------------
-python -m pip install --index-url https://rocm.nightlies.amd.com/v2/gfx110X-all/ --pre torch torchaudio torchvision
+python -m pip install --index-url https://rocm.nightlies.amd.com/v2/gfx110X-dgpu/ --pre torch torchaudio torchvision
 
 
 
