@@ -68,10 +68,10 @@ echo -------------------------------------
 cd /d "%ComfyUIPath%"
 
 rem メモリ効率アテンションを有効
-set TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL=1
+rem set TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL=1
 
 rem GPU内蔵System DMAを無効
-set HSA_ENABLE_SDMA=0
+rem set HSA_ENABLE_SDMA=0
 
 rem GPUデバイスを指定
 set CUDA_VISIBLE_DEVICES=1

@@ -148,14 +148,6 @@
 
       4. 環境変数を設定
 
-      * メモリ効率アテンションを有効
-      ```
-      set TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL=1
-      ```
-      * GPU内蔵System DMAを無効
-      ```
-      set HSA_ENABLE_SDMA=0
-      ```
       * GPUデバイスを指定
       * 複数のGPU（iGPU含む）は処理するGPUを指定する
       * 数字は環境によって異なるため 各自指定してください（0～）
@@ -166,7 +158,7 @@
       * ComfyUI起動オプション
       * 任意で指定してください
       ```
-      set COMMANDLINE_ARGS=--use-pytorch-cross-attention --normalvram
+      set COMMANDLINE_ARGS=--use-pytorch-cross-attention
       ```
 
       * ComfyUI起動
